@@ -6,685 +6,76 @@
 
     <title>Cradle Saints Nursery & Primary School</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background:  #f5f9fc;
-        }
-
-        /* =========================
-           HEADER
-        ========================= */
-
-        header {
-            background: #ffffff;
-            padding: 18px 8%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .logo {
-            font-size: 23px;
-            font-weight: bold;
-            color: #174a7c;
-        }
-
-        nav {
-            display: flex;
-            align-items: center;
-            gap: 28px;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 600;
-            transition: 0.3s;
-        }
-
-        nav a:hover {
-            color: #174a7c;
-        }
-        .menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    color: #174a7c;
-    font-size: 28px;
-    cursor: pointer;
-}
-
-
-        /* =========================
-           HERO
-        ========================= */
-
-        .hero {
-    min-height: 600px;
-    display: flex;
-    align-items: center;
-    padding: 80px 8%;
-    position: relative;
-
-    background:
-        linear-gradient(rgba(0, 45, 80, 0.65), rgba(0, 45, 80, 0.65)),
-        url("school.jpg") center/cover no-repeat;
-}
-        .hero-content {
-            max-width: 720px;
-        }
-
-        .approved {
-            display: inline-block;
-            background: #e5f4e8;
-            color: #26733b;
-            padding: 8px 16px;
-            border-radius: 30px;
-            font-size: 14px;
-            font-weight: bold;
-            margin-bottom: 22px;
-        }
-
-        .hero h1 {
-            font-size: 50px;
-            line-height: 1.15;
-            color: white;
-            margin-bottom: 22px;
-        }
-
-        .hero p {
-            font-size: 18px;
-            color: white;
-            max-width: 650px;
-            margin-bottom: 32px;
-        }
-        .hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: inherit;
-    filter: blur(4px);
-    transform: scale(1.05);
-    z-index: 0;
-}
-.hero-content {
-    position: relative;
-    z-index: 2;
-}
-        .buttons {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-
-        .buttons a {
-            display: inline-block;
-            text-decoration: none;
-            padding: 14px 25px;
-            border-radius: 7px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        .enrol {
-            background: #174a7c;
-            color: white;
-        }
-
-        .enrol:hover {
-            background: #103858;
-        }
-
-        .whatsapp {
-            background: #25d366;
-            color: white;
-        }
-
-        .whatsapp:hover {
-            background: #1da851;
-        }
-
-
-        /* =========================
-           GENERAL SECTION TITLE
-        ========================= */
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 28px;
-        }
-
-        .section-title span {
-            color: #25a65a;
-            font-weight: bold;
-            font-size: 14px;
-            letter-spacing: 0.5px;
-        }
-
-        .section-title h2 {
-            color: #174a7c;
-            font-size: 34px;
-            margin-top: 8px;
-        }
-
-
-        /* =========================
-           ABOUT
-        ========================= */
-
-        .about {
-            padding: 80px 8%;
-            text-align: center;
-            background: #ffffff;
-        }
-
-        .about > p {
-            max-width: 850px;
-            margin: 0 auto;
-            line-height: 1.8;
-            color: #555;
-            font-size: 17px;
-        }
-
-        .info-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 22px;
-            margin-top: 45px;
-        }
-
-        .info-card {
-            background: #f5f9fc;
-            padding: 28px 22px;
-            border-radius: 14px;
-            text-align: left;
-            border-top: 4px solid #174a7c;
-            transition: 0.3s;
-        }
-
-        .info-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-        }
-
-        .info-card h3 {
-            color: #174a7c;
-            margin-bottom: 14px;
-            font-size: 20px;
-        }
-
-        .info-card p {
-            color: #555;
-            line-height: 1.7;
-            margin-bottom: 12px;
-        }
-
-        .info-card ol {
-            padding-left: 20px;
-            color: #555;
-            line-height: 1.8;
-        }
-
-
-/* =========================
-   GALLERY
-========================= */
-
-.gallery {
-    padding: 80px 8%;
-    background: #f5f9fc;
-    text-align: center;
-}
-
-.gallery-intro {
-    max-width: 700px;
-    margin: 0 auto 40px;
-    color: #555;
-    line-height: 1.7;
-}
-
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 28px;
-    width: 100%;
-}
-
-.gallery-item {
-    background: #ffffff;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-    transition: 0.3s;
-    position: relative;
-}
-
-.gallery-item:hover {
-    transform: translateY(-7px);
-    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
-}
-
-.gallery-photo {
-    width: 100%;
-    height: 190px;
-    overflow: hidden;
-}
-
-.gallery-photo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.4s;
-}
-
-.gallery-item:hover .gallery-photo img {
-    transform: scale(1.05);
-}
-
-.gallery-icon {
-    width: 58px;
-    height: 58px;
-    border-radius: 50%;
-    background: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 27px;
-    margin: -29px auto 12px;
-    position: relative;
-    z-index: 2;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-}
-
-.gallery-item h3 {
-    color: #174a7c;
-    font-size: 20px;
-    margin: 0 15px 10px;
-}
-
-.gallery-item p {
-    color: #555;
-    font-size: 15px;
-    line-height: 1.6;
-    margin: 0 18px 25px;
-}
-    
-
-
-        /* =========================
-           WHY CHOOSE US
-        ========================= */
-
-        .why-us {
-            padding: 80px 8%;
-            background: #ffffff;
-            text-align: center;
-        }
-
-        .why-intro {
-            max-width: 700px;
-            margin: 0 auto 45px;
-            color: #555;
-            line-height: 1.7;
-            font-size: 17px;
-        }
-
-        .why-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 22px;
-        }
-
-        .why-card {
-            background: #f8fbfd;
-            padding: 35px 22px;
-            border-radius: 15px;
-            border: 1px solid #e5edf3;
-            box-shadow: 0 7px 22px rgba(0, 0, 0, 0.06);
-            transition: 0.3s;
-        }
-
-        .why-card:hover {
-            transform: translateY(-7px);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.10);
-        }
-
-        .why-icon {
-            width: 70px;
-            height: 70px;
-            margin: 0 auto 20px;
-            background: #eaf4fb;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 32px;
-        }
-
-        .why-card h3 {
-            color: #174a7c;
-            margin-bottom: 12px;
-            font-size: 20px;
-        }
-
-        .why-card p {
-            color: #555;
-            line-height: 1.7;
-        }
-
-
-        /* =========================
-           CONTACT
-        ========================= */
-
-        .contact {
-            padding: 80px 8%;
-            background: #f5f9fc;
-            text-align: center;
-        }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-            margin-top: 45px;
-        }
-
-        .contact-card {
-            padding: 32px 25px;
-            background: white;
-            border-radius: 14px;
-            text-align: center;
-            box-shadow: 0 6px 22px rgba(0, 0, 0, 0.06);
-        }
-
-        .contact-card h3 {
-            color: #174a7c;
-            margin-bottom: 15px;
-            font-size: 20px;
-        }
-
-        .contact-card p {
-            color: #555;
-            line-height: 1.8;
-            margin-bottom: 22px;
-        }
-
-        .map-button,
-        .contact-whatsapp,
-        .admission-button {
-            display: inline-block;
-            padding: 12px 20px;
-            border-radius: 7px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        .map-button {
-            background: #174a7c;
-            color: white;
-        }
-
-        .contact-whatsapp {
-            background: #25d366;
-            color: white;
-        }
-
-        .admission-button {
-            background: #174a7c;
-            color: white;
-        }
-
-        .map-button:hover,
-        .contact-whatsapp:hover,
-        .admission-button:hover {
-            opacity: 0.85;
-        }
-
-
-        /* =========================
-           FOOTER
-        ========================= */
-
-        footer {
-            background: #174a7c;
-            color: white;
-            text-align: center;
-            padding: 28px 20px;
-        }
-
-        footer p {
-            margin: 4px 0;
-        }
-        .footer-links {
-    margin: 15px 0;
-}
-
-.footer-links a {
-    color: white;
-    text-decoration: none;
-    margin: 0 10px;
-    font-weight: 600;
-}
-
-.footer-links a:hover {
-    text-decoration: underline;
-}
-
-        /* =========================
-           MOBILE
-        ========================= */
-
-        @media (max-width: 900px) {
-
-            .info-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .why-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .gallery-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .contact-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .hero h1 {
-                font-size: 42px;
-            }
-        }
-
-
-        @media (max-width: 650px) {
-
-            header {
-    padding: 16px 20px;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-}
-.menu-toggle {
-    display: block !important;
-    color: #174a7c;
-}
-
-nav {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: auto;
-    right: 20px;
-    background: white;
-    flex-direction: column;
-    gap: 0;
-    padding: 8px 15px;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-    z-index: 1000;
-}
-
-nav.open {
-    display: flex;
-    background: #eaf4fb;
-}
-
-nav a {
-    padding: 10px 5px;
-    color: #333;
-}
-
-            .logo {
-                font-size: 21px;
-            }
-
-            nav {
-                gap: 16px;
-            }
-
-            nav a {
-                font-size: 14px;
-            }
-
-            .hero {
-                padding: 70px 20px;
-                min-height: 520px;
-            }
-
-            .hero h1 {
-                font-size: 36px;
-            }
-
-            .hero p {
-                font-size: 16px;
-            }
-
-            .buttons {
-                flex-direction: column;
-                align-items: stretch;
-            }
-
-            .buttons a {
-                text-align: center;
-                margin: 0;
-            }
-
-            .about,
-            .gallery,
-            .why-us,
-            .contact {
-                padding: 60px 20px;
-            }
-
-            .section-title h2 {
-                font-size: 28px;
-            }
-
-            .info-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .gallery-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .why-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .gallery-item {
-                height: 300px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 
 <body>
 
+    <!-- HEADER -->
+    <header>
+        <div class="logo"><h2>Cradle Saints</h2>
+          <span>Nursery & Primary School</span>
+        </div>
 
-<!-- =========================
-     HEADER
-========================= -->
+        <button class="menu-toggle" aria-label="Open menu">
+            ☰
+        </button>
 
-<header>
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="academics.html">Academics</a>
+            <a href="why-us.html">Why Choose Us</a>
+            <a href="leadership.html">Leadership</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="admission.html">Admission</a>
+            <a href="announcements.html">Announcements</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
 
-    <div class="logo">
-        Cradle Saints
-    </div>
+        <div class="header-buttons">
+            <a href="https://wa.me/2348062353133"
+               class="header-enrol"
+               target="_blank">
+                Enrol Now
+            </a>
 
-    <button class="menu-toggle" aria-label="Open menu">
-    ☰
-</button>
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#why-us">Why Us</a>
-        <a href="#contact">Contact</a>
-    </nav>
-
-</header>
+            <a href="https://wa.me/2347068748062"
+               class="header-chat"
+               target="_blank">
+                Chat With Us
+            </a>
+        </div>
+    </header>
 
 
-<!-- =========================
-     HERO
-========================= -->
-
-<section class="hero" id="home">
+   <!-- HERO / MAIN HOME SECTION -->
+<section class="hero">
 
     <div class="hero-content">
 
         <span class="approved">
-            ✓ Govt.Approved 
+            ✓ Government Approved School
         </span>
 
         <h1>
-            Cradle Saints Nursery & Primary School
+            Cradle Saints<br> 
+            Nursery & Primary School
         </h1>
 
         <p>
             Quality education, character and care.
-            We provide a welcoming and nurturing environment
-            where every child can learn, grow and succeed.
+            A welcoming and nurturing environment where
+            children can learn, grow and thrive.
         </p>
 
         <div class="buttons">
 
-            <a
-                href="https://wa.me/2348062353133?text=Hello%2C%20I%20would%20like%20to%20make%20an%20enquiry%20about%20enrolling%20my%20child%20at%20Cradle%20Saints%20Nursery%20%26%20Primary%20School."
-                class="enrol"
-                target="_blank">
+            <a href="https://wa.me/2348062353133?text=Hello%2C%20I%20would%20like%20to%20make%20an%20enquiry%20about%20enrolling%20my%20child%20at%20Cradle%20Saints%20Nursery%20%26%20Primary%20School."
+               class="enrol"
+               target="_blank">
                 Enrol Now
-            </a>
-
-            <a
-                href="https://wa.me/2348062353133?text=Hello%2C%20I%20would%20like%20to%20make%20an%20enquiry%20about%20Cradle%20Saints%20Nursery%20%26%20Primary%20School."
-                class="whatsapp"
-                target="_blank">
-                Chat With Us
+                <span class="arrow">➜</span>
             </a>
 
         </div>
@@ -694,490 +85,158 @@ nav a {
 </section>
 
 
-<!-- =========================
-     ABOUT
-========================= -->
+    <!-- WELCOME -->
+    <section class="home-welcome">
 
-<section class="about" id="about">
-
-    <div class="section-title">
-
-        <span>ABOUT CRADLE SAINTS</span>
-
-        <h2>
-            Welcome to Cradle Saints
-        </h2>
-
-    </div>
-
-
-    <p>
-        At Cradle Saints, we provide our children with quality education in a
-        welcoming and enabling environment where your children are given
-        excellent care physically, emotionally and socially, using appropriate
-        resources.
-    </p>
-
-
-    <div class="info-grid">
-
-
-        <!-- Mission -->
-
-        <div class="info-card">
-
-            <h3>
-                🎯 Our Mission
-            </h3>
-
-            <p>
-                Adding value by preparing children for a future of success
-                and distinction.
-            </p>
-
+        <div class="section-title">
+            <span>WELCOME</span>
+            <h2>Welcome to Cradle Saints</h2>
         </div>
-
-
-        <!-- Vision -->
-
-        <div class="info-card">
-
-            <h3>
-                🌟 Our Vision
-            </h3>
-
-            <p>
-                To be the choice of parents when it comes to giving our
-                children the best start in life.
-            </p>
-
-        </div>
-
-
-        <!-- Values -->
-
-        <div class="info-card">
-
-            <h3>
-                ❤️ Our Values
-            </h3>
-
-            <p>
-                We earnestly promote these values:
-            </p>
-
-            <ol>
-
-                <li>
-                    Having the fear and love of God.
-                </li>
-
-                <li>
-                    Teaching the truth always.
-                </li>
-
-                <li>
-                    Respectfulness and Humility.
-                </li>
-
-            </ol>
-
-        </div>
-
-
-        <!-- Curriculum -->
-
-        <div class="info-card">
-
-            <h3>
-                📚 Our Curriculum
-            </h3>
-
-            <p>
-                The school's core curriculum focuses on numeracy, reading
-                and character building.
-            </p>
-
-            <p>
-                We also have extracurricular activities such as sports,
-                excursions, field trips, clubs and societies.
-            </p>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     GALLERY
-========================= -->
-
-<section class="gallery">
-
-    <div class="section-title">
-
-        <span>OUR SCHOOL</span>
-
-        <h2>
-            Life at Cradle Saints
-        </h2>
-
-    </div>
-
-
-    <p class="gallery-intro">
-
-        Take a glimpse into our learning environment and the activities
-        that make learning enjoyable at Cradle Saints.
-
-    </p>
-
-
-   <div class="gallery-grid">
-
-    <!-- OUR SCHOOL -->
-    <div class="gallery-item">
-
-        <div class="gallery-photo">
-            <img src="school.jpg" alt="Cradle Saints Nursery & Primary School">
-        </div>
-
-        <div class="gallery-icon">
-            🏫
-        </div>
-
-        <h3>
-            Our School
-        </h3>
 
         <p>
-            A welcoming and enabling environment where every child
-            can learn, grow and thrive.
+            Cradle Saints Nursery & Primary School is committed to providing
+            quality education in a welcoming and enabling environment where
+            children are cared for and encouraged to learn, grow and develop.
         </p>
 
-    </div>
-
-
-    <!-- OUR CLASSROOMS -->
-    <div class="gallery-item">
-
-        <div class="gallery-photo">
-            <img src="classroom.jpg" alt="Cradle Saints classroom">
-        </div>
-
-        <div class="gallery-icon">
-            📚
-        </div>
-
-        <h3>
-            Our Classrooms
-        </h3>
-
-        <p>
-            Comfortable learning spaces designed to support effective
-            learning and development.
-        </p>
-
-    </div>
-
-
-    <!-- LEARNING ACTIVITIES -->
-    <div class="gallery-item">
-
-        <div class="gallery-photo">
-            <img src="learning.jpg" alt="Learning activities at Cradle Saints">
-        </div>
-
-        <div class="gallery-icon">
-            💡
-        </div>
-
-        <h3>
-            Learning Activities
-        </h3>
-
-        <p>
-            Engaging activities that help children learn, explore
-            and develop their abilities.
-        </p>
-
-    </div>
-
-
-    <!-- SPORTS & ACTIVITIES -->
-    <div class="gallery-item">
-
-        <div class="gallery-photo">
-            <img src="sports.jpg" alt="Sports activities at Cradle Saints">
-        </div>
-
-        <div class="gallery-icon">
-            ⚽
-        </div>
-
-        <h3>
-            Sports & Activities
-        </h3>
-
-        <p>
-            Sports, excursions, clubs and activities that encourage
-            confidence, teamwork and creativity.
-        </p>
-
-    </div>
-
-</div>
-
-<!-- =========================
-     WHY CHOOSE US
-========================= -->
-
-<section class="why-us" id="why-us">
-
-    <div class="section-title">
-
-        <span>
-            WHY CHOOSE US
-        </span>
-
-        <h2>
-            Why Choose Cradle Saints?
-        </h2>
-
-    </div>
-
-
-    <p class="why-intro">
-
-        At Cradle Saints, we are committed to giving every child a strong
-        foundation for learning, character and future success.
-
-    </p>
-
-
-    <div class="why-grid">
-
-
-        <!-- CARD 1 -->
-
-        <div class="why-card">
-
-            <div class="why-icon">
-                ❤️
-            </div>
-
-            <h3>
-                Loving Care
-            </h3>
-
-            <p>
-                We provide a welcoming and nurturing environment where every
-                child receives care and attention.
-            </p>
-
-        </div>
-
-
-        <!-- CARD 2 -->
-
-        <div class="why-card">
-
-            <div class="why-icon">
-                📚
-            </div>
-
-            <h3>
-                Quality Education
-            </h3>
-
-            <p>
-                We focus on numeracy, reading and other essential skills
-                to support every child's development.
-            </p>
-
-        </div>
-
-
-        <!-- CARD 3 -->
-
-        <div class="why-card">
-
-            <div class="why-icon">
-                🌱
-            </div>
-
-            <h3>
-                Character Building
-            </h3>
-
-            <p>
-                We encourage truth, respect, humility and the fear and love
-                of God.
-            </p>
-
-        </div>
-
-
-        <!-- CARD 4 -->
-
-        <div class="why-card">
-
-            <div class="why-icon">
-                ⚽
-            </div>
-
-            <h3>
-                Beyond the Classroom
-            </h3>
-
-            <p>
-                Children also participate in sports, excursions, field trips,
-                clubs and other activities.
-            </p>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     CONTACT
-========================= -->
-
-<section class="contact" id="contact">
-
-    <div class="section-title">
-
-        <span>
-            GET IN TOUCH
-        </span>
-
-        <h2>
-            Contact Cradle Saints
-        </h2>
-
-    </div>
-
-
-    <div class="contact-grid">
-
-
-        <!-- LOCATION -->
-
-        <div class="contact-card">
-
-            <h3>
-                📍 Our Location
-            </h3>
-
-            <p>
-                No. 4 Chukwujekwu Street,<br>
-                off Bishop Street,<br>
-                Abule-Ado, Festac Phase 2,<br>
-                Lagos State, Nigeria.
-            </p>
-
-        <a
-            href="https://maps.app.goo.gl/QbMBQ8pgdSmW7jBS6?g_st=iw"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="map-button">
-
-            📍 View on Google Maps
-
+        <a href="about.html" class="primary-button">
+            Learn More About Us
         </a>
 
+    </section>
+
+
+    <!-- SCHOOL LIFE -->
+    <section class="home-school-life">
+
+        <div class="section-title">
+            <span>OUR SCHOOL</span>
+            <h2>School Life</h2>
+        </div>
+
+        <p>
+            Take a glimpse into the environment and school life at
+            Cradle Saints Nursery & Primary School.
+        </p>
+
+        <div class="home-photo">
+
+            <img src="school.jpg"
+                 alt="Cradle Saints Nursery & Primary School">
 
         </div>
 
+        <a href="gallery.html" class="primary-button">
+            View Our Gallery
+        </a>
 
-        <!-- WHATSAPP -->
-
-        <div class="contact-card">
-
-            <h3>
-                💬 WhatsApp
-            </h3>
-
-            <p>
-                Have a question about admissions or the school?
-                Send us a message on WhatsApp.
-            </p>
-
-            <a
-                href="https://wa.me/2348062353133?text=Hello%2C%20I%20would%20like%20to%20make%20an%20enquiry%20about%20Cradle%20Saints%20Nursery%20%26%20Primary%20School."
-                target="_blank"
-                class="contact-whatsapp">
-
-                Chat With Us
-
-            </a>
-
-        </div>
+    </section>
 
 
-        <!-- ADMISSIONS -->
+    <!-- ADMISSION -->
+    <section class="home-admissions">
 
-        <div class="contact-card">
+    <div class="home-admissions-content">
 
-            <h3>
-                📝 Admissions
-            </h3>
+        <span class="section-label">ADMISSIONS</span>
 
-            <p>
-                Interested in enrolling your child at Cradle Saints?
-                Contact our admissions team for more information.
-            </p>
+        <h2>Give Your Child a Strong Start</h2>
 
-            <a
-                href="https://wa.me/2347068748062?text=Hello%2C%20I%20would%20like%20to%20make%20an%20enquiry%20about%20enrolling%20my%20child%20at%20Cradle%20Saints%20Nursery%20%26%20Primary%20School."
-                target="_blank"
-                class="admission-button">
+        <p>
+            Interested in enrolling your child at Cradle Saints Nursery & Primary School?
+            Get in touch with us to learn more about admission.
+        </p>
 
-                Enquire About Admission
-
-            </a>
-
-        </div>
-
+        <a href="admission.html" class="home-admissions-btn">
+            Admission Information
+        </a>
 
     </div>
-    
+
 </section>
 
 
-<!-- =========================
-     FOOTER
-========================= -->
+    <!-- CONTACT PREVIEW -->
+    <section class="home-contact">
 
-<footer>
+        <div class="section-title">
+            <span>GET IN TOUCH</span>
+            <h2>Visit or Contact Us</h2>
+        </div>
 
-    <p>
-        <strong>Cradle Saints Nursery & Primary School</strong>
-    </p>
+        <div class="home-contact-grid">
 
-    <p>
-        Abule-Ado, Festac Phase 2, Lagos
-    </p>
+            <div class="contact-card">
 
-    <div class="footer-links">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-    </div>
+                <h3>📍 Our Location</h3>
 
-    <p>
-        © 2026 Cradle Saints Nursery & Primary School. All Rights Reserved.
-    </p>
+                <p>
+                    No. 4 Chukwujekwu Street,<br>
+                    off Bishop Street,<br>
+                    Abule-Ado, Festac Phase 2,<br>
+                    Lagos State, Nigeria.
+                </p>
 
-</footer>
+            </div>
 
-<script src="script.js"></script>
+
+            <div class="contact-card">
+
+                <h3>💬 WhatsApp</h3>
+
+                <p>
+                    Have a question about the school?
+                    Send us a message on WhatsApp.
+                </p>
+
+                <a href="https://wa.me/2348062353133?text=Hello%2C%20I%20would%20like%20to%20make%20an%20enquiry%20about%20Cradle%20Saints%20Nursery%20%26%20Primary%20School."
+                   target="_blank"
+                   class="contact-whatsapp">
+                    Chat With Us
+                </a>
+
+            </div>
+
+        </div>
+
+        <a href="contact.html" class="primary-button">
+            Contact Us
+        </a>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            <strong>
+                Cradle Saints Nursery & Primary School
+            </strong>
+        </p>
+
+        <p>
+            Abule-Ado, Festac Phase 2, Lagos
+        </p>
+
+        <div class="footer-links">
+
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="admissions.html">Admission</a>
+            <a href="contact.html">Contact Us</a>
+
+        </div>
+
+        <p>
+            © 2026 Cradle Saints Nursery & Primary School.
+            All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
 </body>
 </html>
