@@ -3333,7 +3333,7 @@ body.page-loading {
     align-items: center;
     width: max-content;
     white-space: nowrap;
-    animation: announcementMove 50s linear infinite;
+    animation: announcementMove 35s linear infinite;
     will-change: transform;
 }
 
