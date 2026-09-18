@@ -28,7 +28,6 @@
             <a href="leadership.html">Leadership</a>
             <a href="gallery.html" class="active">Gallery</a>
             <a href="admission.html">Admissions</a>
-            <a href="announcements.html">Announcements</a>
             <a href="contact.html">Contact Us</a>
         </nav>
 
@@ -88,20 +87,13 @@
         </div>
 
 
-        <div class="gallery-empty">
+      <div id="publicGallery">
 
-            <div class="gallery-empty-icon">
-                📷
-            </div>
+    <p class="gallery-loading">
+        Loading school photos...
+    </p>
 
-            <h3>Gallery Coming Soon</h3>
-
-            <p>
-                Photos from Cradle Saints Nursery & Primary School
-                will be added here as they become available.
-            </p>
-
-        </div>
+</div>
 
     </section>
 
@@ -148,7 +140,49 @@
         </div>
 
     </footer>
+    <!-- PHOTO LIGHTBOX -->
 
+<div id="galleryLightbox" class="gallery-lightbox">
+
+    <button
+        type="button"
+        id="lightboxClose"
+        class="lightbox-close"
+        aria-label="Close photo">
+        &times;
+    </button>
+
+    <button
+        type="button"
+        id="lightboxPrevious"
+        class="lightbox-arrow lightbox-previous"
+        aria-label="Previous photo">
+        &#10094;
+    </button>
+
+    <div class="lightbox-content">
+
+        <img
+            id="lightboxImage"
+            src=""
+            alt="School photo">
+
+        <p id="lightboxCaption"></p>
+
+    </div>
+
+    <button
+        type="button"
+        id="lightboxNext"
+        class="lightbox-arrow lightbox-next"
+        aria-label="Next photo">
+        &#10095;
+    </button>
+
+</div>
+    
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="script.js"></script>
 
 </body>
 

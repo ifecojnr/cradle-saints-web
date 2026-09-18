@@ -199,49 +199,176 @@
 
 
         <!-- GALLERY SECTION -->
-        <section class="gallery-manager">
+<section class="gallery-manager">
 
-            <div class="manager-heading">
+    <div class="manager-heading">
 
-                <div>
+        <div>
 
-                    <span class="section-label">
-                        SCHOOL PHOTOS
-                    </span>
+            <span class="section-label">
+                SCHOOL PHOTOS
+            </span>
 
-                    <h2>
-                        Manage Gallery
-                    </h2>
+            <h2>
+                Manage Gallery
+            </h2>
 
-                    <p>
-                        Create albums and upload school
-                        activity photos.
-                    </p>
+            <p>
+                Create albums and upload school activity photos.
+            </p>
 
-                </div>
+        </div>
+
+    </div>
+
+
+    <!-- CREATE ALBUM -->
+
+    <div class="gallery-album-form">
+
+        <h3>
+            Create New Album
+        </h3>
+
+        <p>
+            Create an album before adding photos.
+        </p>
+
+        <form id="albumForm">
+
+            <div class="form-group">
+
+                <label for="albumName">
+                    Album Name
+                </label>
+
+                <input
+                    type="text"
+                    id="albumName"
+                    placeholder="e.g. Graduation 2026"
+                    required
+                >
 
             </div>
 
 
-            <div class="gallery-coming-soon">
+            <div class="form-group">
 
-                <div class="gallery-icon">
-                    🖼️
-                </div>
+                <label for="albumDescription">
+                    Album Description
+                </label>
 
-                <h3>
-                    Gallery Manager Coming Next
-                </h3>
-
-                <p>
-                    You'll be able to create albums,
-                    upload multiple photos, add captions
-                    and delete photos from here.
-                </p>
+                <textarea
+                    id="albumDescription"
+                    placeholder="Describe this album..."
+                    rows="4"
+                ></textarea>
 
             </div>
 
-        </section>
+
+            <button
+                type="submit"
+                class="save-album-btn"
+            >
+                Create Album
+            </button>
+
+        </form>
+
+    </div>
+
+
+    <!-- ADD PHOTOS -->
+
+    <div class="gallery-photo-upload">
+
+        <h3>
+            Add Photos
+        </h3>
+
+        <p>
+            Select an album and upload one or more school photos.
+        </p>
+
+        <form id="photoUploadForm">
+
+            <div class="form-group">
+
+                <label for="photoAlbum">
+                    Select Album
+                </label>
+
+                <select id="photoAlbum" required>
+
+                    <option value="">
+                        Select an album
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="galleryPhotos">
+                    Select Photos
+                </label>
+
+                <input
+                    type="file"
+                    id="galleryPhotos"
+                    accept="image/*"
+                    multiple
+                    required
+                >
+
+            </div>
+
+
+            <div id="selectedPhotoInfo"></div>
+
+
+            <button
+                type="submit"
+                class="upload-photos-btn"
+            >
+                Upload Photos
+            </button>
+
+        </form>
+
+    </div>
+
+
+    <!-- EXISTING ALBUMS -->
+
+    <div class="gallery-albums-list">
+
+        <div class="gallery-albums-heading">
+
+            <h3>
+                Your Albums
+            </h3>
+
+            <p>
+                Manage your school photo albums.
+            </p>
+
+        </div>
+
+        <div id="adminGalleryAlbums">
+
+            <p>
+                Loading albums...
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
 
     </main>
 
