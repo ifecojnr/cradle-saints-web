@@ -2471,3 +2471,78 @@ body.page-loading {
 #announcementList .announcement-actions button {
     margin: 0 !important;
 }
+/* =========================================
+   PUBLIC ANNOUNCEMENTS
+========================================= */
+
+.announcements-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 35px auto 60px;
+    display: grid;
+    gap: 20px;
+}
+
+.public-announcement-card {
+    padding: 28px 30px;
+    background: #ffffff;
+    border: 1px solid #e4e9ef;
+    border-left: 5px solid #174a7c;
+    border-radius: 12px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.05);
+}
+
+.public-announcement-header h3 {
+    margin: 0 0 12px;
+    color: #174a7c;
+    font-size: 21px;
+    line-height: 1.4;
+}
+
+.public-announcement-content {
+    margin: 0;
+    color: #555555;
+    font-size: 15px;
+    line-height: 1.75;
+}
+
+.no-announcements {
+    padding: 45px 30px;
+    background: #f8fafc;
+    border: 1px solid #e4e9ef;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.no-announcements h3 {
+    margin: 0 0 10px;
+    color: #174a7c;
+    font-size: 20px;
+}
+
+.no-announcements p {
+    max-width: 600px;
+    margin: 0 auto;
+    color: #667085;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+@media (max-width: 700px) {
+
+    .announcements-container {
+        margin: 25px auto 45px;
+    }
+
+    .public-announcement-card {
+        padding: 22px 20px;
+    }
+
+    .public-announcement-header h3 {
+        font-size: 19px;
+    }
+
+    .public-announcement-content {
+        font-size: 14px;
+    }
+}
