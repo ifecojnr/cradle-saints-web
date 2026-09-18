@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard | Cradle Saints</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ADMIN HEADER -->
+    <header class="admin-header">
+
+        <div class="logo">
+            <h2>Cradle Saints</h2>
+            <span>Nursery & Primary School</span>
+        </div>
+
+        <button id="logoutBtn" class="logout-btn">
+            Logout
+        </button>
+
+    </header>
+
+
+    <!-- DASHBOARD -->
+    <main class="admin-dashboard">
+
+        <div class="dashboard-heading">
+            <span class="section-label">ADMINISTRATION</span>
+
+            <h1>
+                Cradle Saints Admin Dashboard
+            </h1>
+
+            <p>
+                Manage school announcements and gallery content
+                from one place.
+            </p>
+        </div>
+
+
+        <!-- QUICK ACCESS -->
+        <section class="dashboard-cards">
+
+            <div class="dashboard-card">
+
+                <div class="dashboard-card-icon">
+                    📢
+                </div>
+
+                <div>
+                    <h2>Announcements</h2>
+
+                    <p>
+                        Add, edit, publish and delete
+                        school announcements.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="dashboard-card">
+
+                <div class="dashboard-card-icon">
+                    🖼️
+                </div>
+
+                <div>
+                    <h2>Gallery</h2>
+
+                    <p>
+                        Create albums and manage
+                        school photos.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ANNOUNCEMENT MANAGER -->
+        <section class="announcement-manager">
+
+            <div class="manager-heading">
+
+                <div>
+                    <span class="section-label">
+                        SCHOOL UPDATES
+                    </span>
+
+                    <h2>
+                        Manage Announcements
+                    </h2>
+
+                    <p>
+                        Create and manage important
+                        school announcements.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- ANNOUNCEMENT FORM -->
+            <form id="announcementForm">
+
+                <input
+                    type="hidden"
+                    id="announcementId"
+                >
+
+
+                <div class="form-group">
+
+                    <label for="announcementTitle">
+                        Announcement Title
+                    </label>
+
+                    <input
+                        type="text"
+                        id="announcementTitle"
+                        placeholder="Enter announcement title"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="announcementContent">
+                        Announcement Content
+                    </label>
+
+                    <textarea
+                        id="announcementContent"
+                        placeholder="Write the announcement..."
+                        rows="6"
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <div class="publish-control">
+
+    <span class="publish-label">
+        Publish announcement
+    </span>
+
+    <label class="switch">
+
+        <input
+            type="checkbox"
+            id="announcementPublished"
+        >
+
+        <span class="slider"></span>
+
+    </label>
+
+</div>
+
+
+                <button
+                    type="submit"
+                    class="save-announcement-btn"
+                >
+                    Save Announcement
+                </button>
+
+            </form>
+
+
+            <!-- ANNOUNCEMENT LIST -->
+            <div class="announcement-list-heading">
+
+                <h3>
+                    📢 Announcements
+                </h3>
+
+                <p>
+                    Existing school announcements
+                </p>
+
+            </div>
+
+
+            <div id="announcementList"></div>
+
+        </section>
+
+
+        <!-- GALLERY SECTION -->
+        <section class="gallery-manager">
+
+            <div class="manager-heading">
+
+                <div>
+
+                    <span class="section-label">
+                        SCHOOL PHOTOS
+                    </span>
+
+                    <h2>
+                        Manage Gallery
+                    </h2>
+
+                    <p>
+                        Create albums and upload school
+                        activity photos.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="gallery-coming-soon">
+
+                <div class="gallery-icon">
+                    🖼️
+                </div>
+
+                <h3>
+                    Gallery Manager Coming Next
+                </h3>
+
+                <p>
+                    You'll be able to create albums,
+                    upload multiple photos, add captions
+                    and delete photos from here.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="admin-footer">
+
+        <p>
+            © 2026 Cradle Saints Nursery & Primary School
+        </p>
+
+    </footer>
+
+
+    <!-- SUPABASE -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <!-- WEBSITE SCRIPT -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
