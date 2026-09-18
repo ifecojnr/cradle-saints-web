@@ -1138,73 +1138,262 @@ footer p {
 }
 
 .leadership-grid {
-    max-width: 1150px;
+    width: 100%;
+    max-width: 1050px;
     margin: 45px auto 0;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 }
 
+/* =========================
+   LEADER CARD
+========================= */
+
 .leader-card {
-    background: #f7fafc;
-    border: 1px solid #e5ebf0;
+    background: #ffffff;
+    border: 1px solid #e3e8ed;
     border-radius: 14px;
     overflow: hidden;
-    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
+
+.leader-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.10);
+}
+
+
+/* =========================
+   CENTER FOURTH CARD
+========================= */
+
+.leader-card:nth-child(4) {
+    grid-column: 2;
+}
+
+
+/* =========================
+   PHOTO
+========================= */
 
 .leader-image {
     width: 100%;
-    height: 330px;
+    aspect-ratio: 16 / 9;
     overflow: hidden;
+    background: #f5f7f9;
 }
 
 .leader-image img {
+    display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center center;
 }
 
+
+/* =========================
+   NAME & POSITION
+========================= */
+
 .leader-content {
-    padding: 22px;
+    padding: 22px 20px 25px;
     text-align: center;
 }
 
 .leader-title {
+    display: block;
+    margin-bottom: 8px;
     color: #25a65a;
-    font-size: 13px;
-    font-weight: bold;
+    font-size: 12px;
+    font-weight: 800;
     letter-spacing: 1px;
 }
 
 .leader-content h3 {
+    margin: 0;
     color: #174a7c;
-    font-size: 23px;
-    margin: 8px 0 0;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.4;
 }
 
 
-/* TABLET */
+/* =========================
+   TABLET
+========================= */
 
 @media (max-width: 900px) {
 
     .leadership-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .leader-card:nth-child(4) {
+        grid-column: 1 / 3;
+        width: calc(50% - 12.5px);
+        justify-self: center;
     }
 
 }
 
 
-/* MOBILE */
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width: 600px) {
 
+    .leadership-section {
+        padding: 50px 15px 70px;
+    }
+
     .leadership-grid {
         grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .leader-card:nth-child(4) {
+        grid-column: auto;
+        width: 100%;
     }
 
     .leader-image {
-        height: 320px;
+        height: 240px;
+    }
+
+    .leader-content {
+        padding: 20px 15px 23px;
+    }
+
+    .leader-title {
+        font-size: 11px;
+    }
+
+    .leader-content h3 {
+        font-size: 18px;
+    }
+
+}
+
+
+/* =========================
+   DESKTOP SPACING
+========================= */
+
+@media (min-width: 1100px) {
+
+    .leadership-section {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 800px) {
+
+    .leadership-section {
+        padding: 50px 15px 70px;
+    }
+
+    .leadership-grid {
+        margin-top: 30px;
+    }
+
+    .leadership-header,
+    .leader-row {
+        grid-template-columns: 150px 1fr 180px;
+    }
+
+    .leader-image {
+        width: 125px;
+        height: 90px;
+        margin: 12px;
+    }
+
+    .leadership-header div {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .leader-name {
+        padding: 12px 15px;
+    }
+
+    .leader-name h3,
+    .leader-position {
+        font-size: 15px;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .leadership-section {
+        padding: 40px 10px 60px;
+    }
+
+    /*
+       Keep the table structure intact on phones.
+       The user can swipe horizontally rather than
+       having the columns become cramped.
+    */
+
+    .leadership-grid {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .leadership-header,
+    .leader-row {
+        min-width: 520px;
+        grid-template-columns: 130px 200px 190px;
+    }
+
+    .leadership-header {
+        min-height: 45px;
+    }
+
+    .leadership-header div {
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .leader-row {
+        min-height: 110px;
+    }
+
+    .leader-image {
+        width: 105px;
+        height: 80px;
+        margin: 10px;
+    }
+
+    .leader-name {
+        padding: 10px;
+    }
+
+    .leader-name h3,
+    .leader-position {
+        font-size: 14px;
+    }
+
+    .leader-position {
+        padding: 10px;
     }
 
 }
@@ -3190,4 +3379,38 @@ body.page-loading {
         font-size: 13px;
         margin-right: 50px;
     }
+}
+/* =========================================
+   FINAL MOBILE LEADERSHIP PHOTO FIX
+========================================= */
+
+@media (max-width: 600px) {
+
+    .leader-card {
+        width: 100%;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .leader-image {
+        width: 100% !important;
+        height: 220px !important;
+        margin: 0 auto !important;
+        padding: 0 !important;
+        display: block !important;
+        overflow: hidden !important;
+        text-align: center;
+    }
+
+    .leader-image img {
+        display: block !important;
+        width: 100% !important;
+        height: 100% !important;
+        max-width: none !important;
+        margin: 0 auto !important;
+        object-fit: cover !important;
+        object-position: center center !important;
+    }
+
 }
