@@ -3144,7 +3144,7 @@ body.page-loading {
     align-items: center;
     width: max-content;
     white-space: nowrap;
-    animation: announcementMove 52s linear infinite;
+    animation: announcementMove 50s linear infinite;
     will-change: transform;
 }
 
@@ -3166,7 +3166,7 @@ body.page-loading {
 
 @keyframes announcementMove {
     from {
-        transform: translateX(100%);
+        transform: translateX(20%);
     }
 
     to {
