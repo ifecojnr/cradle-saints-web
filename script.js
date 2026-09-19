@@ -76,7 +76,7 @@ if (forgotPassword) {
                 email,
                 {
                    redirectTo:
-    "https://ifecojnr.github.io/cradle-saints-web/admin.html"
+    "https://ifecojnr.github.io/cradle-saints-web/reset-password.html"
                 }
             );
 
@@ -1339,4 +1339,59 @@ if (logoutBtn) {
 
         window.location.href = "admin.html";
     });
+}
+const resetPasswordForm =
+    document.getElementById("resetPasswordForm");
+
+if (resetPasswordForm) {
+
+    resetPasswordForm.addEventListener("submit", async function (event) {
+
+        event.preventDefault();
+
+        const newPassword =
+            document.getElementById("newPassword").value;
+
+        const confirmPassword =
+            document.getElementById("confirmPassword").value;
+
+        const resetMessage =
+            document.getElementById("resetMessage");
+
+        if (newPassword !== confirmPassword) {
+
+            resetMessage.textContent =
+                "Passwords do not match.";
+
+            return;
+        }
+
+        resetMessage.textContent =
+            "Updating password...";
+
+        const { error } =
+            await supabaseClient.auth.updateUser({
+                password: newPassword
+            });
+
+        if (error) {
+
+            console.error(error);
+
+            resetMessage.textContent =
+                "Unable to update password: " +
+                error.message;
+
+            return;
+        }
+
+        resetMessage.textContent =
+            "Password updated successfully!";
+
+        setTimeout(function () {
+            window.location.href = "admin.html";
+        }, 1500);
+
+    });
+
 }
