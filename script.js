@@ -54,6 +54,50 @@ if (loginForm) {
         window.location.href = "admin-dashboard.html";
 
     });
+    const forgotPassword =
+    document.getElementById("forgotPassword");
+
+if (forgotPassword) {
+
+    forgotPassword.addEventListener("click", async function (event) {
+
+        event.preventDefault();
+
+        const email =
+            document.getElementById("email").value.trim();
+
+        if (!email) {
+            alert("Please enter your admin email address first.");
+            return;
+        }
+
+        const { error } =
+            await supabaseClient.auth.resetPasswordForEmail(
+                email,
+                {
+                   redirectTo:
+    "https://ifecojnr.github.io/cradle-saints-web/admin.html"
+                }
+            );
+
+        if (error) {
+            console.error(error);
+
+            alert(
+                "Unable to send password reset email: " +
+                error.message
+            );
+
+            return;
+        }
+
+        alert(
+            "Password reset email sent. Please check your email."
+        );
+
+    });
+
+}
 
 }// ===============================
 // ANNOUNCEMENT MANAGER
@@ -533,7 +577,7 @@ if (photoUploadForm) {
 
         alert("Photos uploaded successfully!");
 
-        photoUploadForm.reset();
+        document.getElementById("galleryPhotos").value = "";
 
         selectedPhotoInfo.textContent = "";
 

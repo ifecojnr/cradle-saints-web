@@ -3414,3 +3414,16 @@ body.page-loading {
     }
 
 }
+.forgot-password {
+    display: block;
+    margin-top: 14px;
+    color: #174a7c;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
