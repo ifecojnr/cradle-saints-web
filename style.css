@@ -3348,3 +3348,94 @@ body.page-loading {
 .forgot-password:hover {
     text-decoration: underline;
 }
+/* =========================
+   OUR DEDICATED TEACHERS
+========================= */
+
+.teachers-section {
+    margin-top: 80px;
+    padding: 70px 20px 20px;
+    background: #f5f8fc;
+    border-top: 1px solid #e6edf5;
+}
+
+.teachers-section .section-title {
+    max-width: 800px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.teachers-section .section-title p {
+    margin-top: 15px;
+    color: #666;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.teachers-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.teacher-card {
+    background: #ffffff;
+    padding: 32px 24px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid #e5ebf2;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.teacher-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.10);
+}
+
+.teacher-card h3 {
+    color: #174a7c;
+    font-size: 19px;
+    margin-bottom: 14px;
+}
+
+.teacher-card p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+    .teachers-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .teachers-section {
+        margin-top: 50px;
+        padding: 55px 18px 15px;
+    }
+
+    .teachers-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .teacher-card {
+        padding: 28px 22px;
+    }
+
+}
